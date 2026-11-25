@@ -67,6 +67,24 @@ function displayBook() {
         row.appendChild(read)
         row.appendChild(id)
         table.appendChild(row)
+
+        let change_btn = document.createElement("button");
+        change_btn.textContent = "Change"
+        read.appendChild(change_btn)
+        change_btn.addEventListener("click" , () => {
+            let newStatus = prompt("Read? , Reading? or not reading?")
+
+            read.textContent = newStatus
+        })
+
+        let delete_btn = document.createElement("button");
+    delete_btn.textContent = "Delete";
+    delete_btn.style.color = "black";
+    row.appendChild(delete_btn);
+
+    delete_btn.addEventListener("click", function () {
+      row.remove();
+    })
     })
 }
 
