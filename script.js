@@ -22,6 +22,9 @@ let button = document.getElementById("submit")
  
 function displayBook() {
     table.textContent = "";
+    let caption = document.createElement("caption")
+    caption.textContent = "Library"
+    table.appendChild(caption)
     let row1 = document.createElement("tr")
     let name = document.createElement("th")
         let author = document.createElement("th")
