@@ -53,7 +53,7 @@ function displayBook() {
         let author = document.createElement("td")
         let pages = document.createElement("td")
         let read = document.createElement("td")
-        let id = document.createElement('td')
+        let id = document.createElement("td")
 
         name.textContent = book.name
         author.textContent = book.author
@@ -95,10 +95,12 @@ button.addEventListener("click" , function(){
         let pages = document.getElementById("pages")
         let read = document.getElementById("read")
 
-        form.reset()
-        dialog.close()
+        
         
         addToLibrary(name.value , author.value , pages.value , read.value)
       displayBook()
+      
+      form.reset()
+        dialog.close()
 } )
   
